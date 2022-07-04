@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>PīnYīn Panda</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header-title">PīnYīn Panda</h1>
+    </header>
+
+    <div class="container how-to-play">
+      <p>
+        <span>PīnYīn</span> Panda will show you a Mandarin word or phrase in
+        <span>PīnYīn</span>. You have to type the correct English translation of
+        the word. Click "Show Me the Words to Begin."
+      </p>
+    </div>
+
+    <div class="container word-container">
+      <!-- <input type="text" placeholder="Show Me the Words" id="word" /> -->
+      <input
+        readonly
+        id="word"
+        placeholder="Show Me the Words"
+        aria-label="Generated Word"
+      ></input>
+    </div>
+
+    <div class="container response-box">
+      <p class="response hide"></p>
+    </div>
+
+    <div class="container answer-container">
+      <input type="text" placeholder="Translation" class="answer" />
+      <button class="button submit-btn" type="submit">Submit</button>
+    </div>
+
+    <div class="buttons-container">
+      <button class="button next-btn">Next Word</button>
+      <button class="button end-btn">End Game</button>
+    </div>
+
+    <div class="panda2">
+      <img src="../images/panda3.jpg" alt="panda" />
+    </div>
+    <script src="../js/gamePlay.js"></script>
+
+  </body>
+</html>
