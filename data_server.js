@@ -1,12 +1,8 @@
 const express = require('express');
+const routes = require('./routes2');
 
-const app1 = express();
-const port = process.env.PORT || 3001;
+const data_server = express();
 
-app1.get('/', (req, res) => {
-  res.send('Hello World');
-});
+data_server.use('/', routes);
 
-app1.listen(port, () => {
-  console.log(`App listening on port ${port}`);
-});
+module.exports = data_server;
