@@ -9,7 +9,7 @@ const rightAnswer = document.getElementById('response');
 let englishAnswer = '';
 
 function getWordInput() {
-  fetch('/api/getPinWord')
+  fetch('/api/getWord')
     .then((response) => {
       if (!response.ok) {
         throw new Error('Network response was not OK');
@@ -33,7 +33,7 @@ function checkAnswer() {
     alert('You must enter an English transation');
     return;
   }
-  if (answer.value === englishAnswer) {
+  if (answer.value.toLowerCase() === englishAnswer.toLowerCase()) {
     rightAnswer.innerHTML = 'Correct';
   } else {
     rightAnswer.innerHTML = 'Incorrect';
