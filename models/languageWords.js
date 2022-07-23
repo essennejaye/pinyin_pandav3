@@ -1,8 +1,9 @@
 class LanguageWords {
-  constructor(pinyin, english, characters) {
+  constructor(traditional, simplified, pinyin, english) {
+    this.traditional = traditional;
+    this.simplified = simplified;
     this.pinyin = pinyin;
     this.english = english;
-    this.characters = characters;
   }
 }
 module.exports = LanguageWords;

@@ -1,10 +1,8 @@
 const wordInput = document.getElementById('word');
 const newWord = document.getElementById('next-btn');
 newWord.addEventListener('click', getWordInput);
-let answer = document.getElementById('answer');
 const submitBtn = document.getElementById('submit-btn');
 submitBtn.addEventListener('click', checkAnswer);
-const rightAnswer = document.getElementById('response');
 
 let englishAnswer = '';
 

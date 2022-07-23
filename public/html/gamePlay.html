@@ -22,7 +22,7 @@
     <div class="container how-to-play">
       <p>
         <span>PīnYīn</span> Panda will show you a Mandarin word or phrase in
-        <span>PīnYīn</span>. You have to type the correct English translation of
+        <span>PīnYīn</span>. You have to select the correct English translation of
         the word. Click Get Word button to begin.
       </p>
     </div>
@@ -36,24 +36,25 @@
       ></input>
     </div>
 
-    <div class="container response-box">
-      <p class="response hide" id="response"></p>
-    </div>
-
     <div class="container answer-container">
-      <input type="text" placeholder="Translation" class="answer" id="answer" />
-      <button class="button submit-btn" type="submit" id="submit-btn">Submit</button>
+      <ol id="answers">
+        <li>this is going to take up a lot of space I huess i will have to size it better</li>
+        <li>this is going to take up a lot of space I huess i will have to size it better</li>
+        <li>this is going to take up a lot of space I huess i will have to size it better</li>
+        <li>this is going to take up a lot of space I huess i will have to size it better</li>
+      </ol>
     </div>
+    <button class="button submit-btn" type="submit" id="submit-btn">Submit</button>
 
     <div class="buttons-container">
       <button class="button next-btn" id="next-btn">Get Word</button>
+      <div class="panda2">
+        <img src="../images/panda3.jpg" alt="panda" />
+      </div>
       <button class="button end-btn" id="end-btn"><a href="index.html">
         End Game </a></button>
     </div>
 
-    <div class="panda2">
-      <img src="../images/panda3.jpg" alt="panda" />
-    </div>
     <script src="../js/gamePlay.js"></script>
 
   </body>

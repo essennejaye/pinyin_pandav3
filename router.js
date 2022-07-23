@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 const LanguageWords = require('./models/languageWords');
-require('dotenv').config();
+const Dictionary = require('./models/Dictionary');
+var random = require('mongoose-simple-random');
 
 const router = express.Router();
 
@@ -27,6 +29,19 @@ router.get('/api/getWord', async (req, res) => {
     console.error(error);
     res.status(500);
   }
+});
+
+router.get('/dict_entries', (req, res) => {
+  Dictionary.findRandom({}, {}, { limit: 4 }, function (err, results) {
+    // if (!err) {
+    //   res.send(results);
+    // }
+    try {
+      res.send(results);
+    } catch (err) {
+      res.status(500).send(err);
+    }
+  });
 });
 
 module.exports = router;
