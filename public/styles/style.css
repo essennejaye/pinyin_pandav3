@@ -119,57 +119,52 @@ button img {
 
 .answer-container {
   height: 28vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   border: none;
   box-shadow: none;
-  /* align-items: center; */
   width: 90vw;
   margin: 30px auto 20px auto;
-  background: #ffffff;
+  background: var(--deep-champagne);
+  /* background: #ffffff; */
+  justify-content: flex-start;
+  overflow-y: auto;
 }
 #answers {
+  display: flex;
+  flex-direction: column;
   list-style-type: lower-alpha;
   list-style-position: inside;
-  font-size: 17px;
+  font-size: 16px;
   color: black;
-  margin: 0px;
-  padding: 0px;
+  margin: 5px;
+  padding: 5px;
 }
 li {
-  margin: 18px 0px;
-  border: 1px solid #ddd;
+  margin: 10px 0px;
+  text-align: justify;
+  cursor: pointer;
+  background: #ffffff;
+  padding: 3px 5px;
 }
-li:nth-child(even) {
-  background-color: #f2f2f2;
-}
-li:hover {
+
+/* li:hover {
   background-color: #ddd;
-}
-.submit-btn,
+} */
 .next-btn,
 .end-btn {
   width: 105px;
   height: 49px;
   font-size: 16px;
 }
-.submit-btn:hover {
-  background-color: var(--moss-green);
-}
-.submit-btn {
-  background-color: var(--wheat);
-}
 .end-btn a {
   text-decoration: none;
   color: black;
 }
-.next-btn:hover {
+/* .next-btn:hover {
   background-color: var(--wheat);
 }
 .end-btn:hover {
   background-color: red;
-}
+} */
 .buttons-container {
   display: flex;
   justify-content: space-between;
