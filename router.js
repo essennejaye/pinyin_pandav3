@@ -3,7 +3,6 @@ const express = require('express');
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 const LanguageWords = require('./models/languageWords');
 const Dictionary = require('./models/Dictionary');
-var random = require('mongoose-simple-random');
 
 const router = express.Router();
 
@@ -32,10 +31,7 @@ const router = express.Router();
 // });
 
 router.get('/dict_entries', (req, res) => {
-  Dictionary.findRandom({}, {}, { limit: 4 }, function (err, results) {
-    // if (!err) {
-    //   res.send(results);
-    // }
+  Dictionary.aggregate([{ $sample: { size: 4 } }], function (err, results) {
     try {
       res.send(results);
     } catch (err) {

@@ -8,6 +8,7 @@ let correctAnswer;
 
 function getNewWord() {
   clearListElements();
+  olEle.addEventListener('click', checkAnswer);
   fetch('/dict_entries')
     .then((response) => {
       if (!response.ok) {
@@ -37,11 +38,9 @@ function createPossibleAnswers(data) {
   let randomRow = data[rowIndex];
   wordInput.value = randomRow.pinyin;
   correctAnswer = randomRow.english;
-  olEle.addEventListener('click', checkAnswer);
   for (i = 0; i < data.length; i++) {
     let listEle = document.createElement('li');
     listEle.setAttribute('id', 'answer');
-    // listEle.addEventListener('click', checkAnswer);
     listEle.append(document.createTextNode(data[i].english));
     olEle.appendChild(listEle);
   }
