@@ -21,13 +21,15 @@
 
     <div class="container how-to-play">
       <p>
-        <span>PīnYīn</span> Panda will show you a Mandarin word or phrase in
-        <span>PīnYīn</span>. You have to select the correct English translation of
-        the word. Click Get Word button to begin.
+        <span>PīnYīn</span> Panda will show a Mandarin word or phrase in
+        <span>PīnYīn</span> with tone numbers. Select the correct English translation of
+        the word. Correct answers are highlighted in light green. Incorrect answers
+        are highlighted in light red and the correct response is bordered with light green.
+        Click Get Word button to begin.
       </p>
     </div>
 
-    <div class="container word-container">
+    <div class="container word-box">
       <input
         readonly
         id="word"
@@ -36,13 +38,12 @@
       ></input>
     </div>
 
-    <div class="container answer-container">
+    <div class="container answer-box">
       <ol id="answers">
       </ol>
     </div>
-    <!-- <button class="button submit-btn" type="submit" id="submit-btn">Submit</button> -->
 
-    <div class="buttons-container">
+    <div class="container bottom-box">
       <button class="button next-btn" id="next-btn">Get Word</button>
       <div class="panda2">
         <img src="../images/panda3.jpg" alt="panda" />

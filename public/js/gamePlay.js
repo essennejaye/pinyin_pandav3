@@ -7,8 +7,6 @@ newWord.addEventListener('click', getNewWord);
 let correctAnswer;
 
 function getNewWord() {
-  clearListElements();
-  olEle.addEventListener('click', checkAnswer);
   fetch('/dict_entries')
     .then((response) => {
       if (!response.ok) {
@@ -17,7 +15,7 @@ function getNewWord() {
       return response.json();
     })
     .then((data) => {
-      createPossibleAnswers(data);
+      getInputAndAnswer(data);
     })
     .catch((error) => {
       console.error(
@@ -27,31 +25,39 @@ function getNewWord() {
     });
 }
 
-function clearListElements() {
-  while (olEle.hasChildNodes()) {
-    olEle.removeChild(olEle.lastChild);
-  }
-}
-
-function createPossibleAnswers(data) {
+function getInputAndAnswer(data) {
   let rowIndex = Math.floor(Math.random() * data.length);
   let randomRow = data[rowIndex];
   wordInput.value = randomRow.pinyin;
   correctAnswer = randomRow.english;
-  for (i = 0; i < data.length; i++) {
-    let listEle = document.createElement('li');
-    listEle.setAttribute('id', 'answer');
-    listEle.append(document.createTextNode(data[i].english));
-    olEle.appendChild(listEle);
+  document.querySelector('ol').replaceChildren(...getAnswerList(data));
+  olEle.addEventListener('click', checkAnswer);
+}
+
+function li(text) {
+  const li = document.createElement('li');
+  li.append(text);
+  if (text === correctAnswer) {
+    li.setAttribute('isCorrect', true);
+  } else {
+    li.setAttribute('isCorrect', false);
   }
+  return li;
+}
+
+function getAnswerList(data) {
+  let liElements = data.map(({ english }) => english);
+  return liElements.map((item) => li(item));
 }
 
 function checkAnswer(event) {
-  let selectedAnswer = event.target.innerHTML;
-  if (selectedAnswer === correctAnswer) {
-    event.target.style.backgroundColor = 'rgba(42, 117, 50, 0.4)';
+  const selectedAnswer = event.target.getAttribute('isCorrect');
+  if (selectedAnswer == 'true') {
+    event.target.classList.add('correct-answer');
   } else {
-    event.target.style.backgroundColor = 'rgba(255, 0, 0, 0.2)';
+    event.target.classList.add('incorrect-answer');
+    var match = olEle.querySelectorAll("li[isCorrect='true']");
+    match[0].classList.add('actual-answer');
   }
   olEle.removeEventListener('click', checkAnswer);
 }
