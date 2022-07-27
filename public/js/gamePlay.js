@@ -34,9 +34,9 @@ function getInputAndAnswer(data) {
   olEle.addEventListener('click', checkAnswer);
 }
 
-function li(text) {
+function getListItems(text, index) {
   const li = document.createElement('li');
-  li.append(text);
+  li.append(`${index}.   ${text}`);
   if (text === correctAnswer) {
     li.setAttribute('isCorrect', true);
   } else {
@@ -47,17 +47,22 @@ function li(text) {
 
 function getAnswerList(data) {
   let liElements = data.map(({ english }) => english);
-  return liElements.map((item) => li(item));
+  return liElements.map((item, index) => getListItems(item, index + 1));
 }
 
 function checkAnswer(event) {
   const selectedAnswer = event.target.getAttribute('isCorrect');
+  event.target.classList.add('noHover');
   if (selectedAnswer == 'true') {
     event.target.classList.add('correct-answer');
   } else {
     event.target.classList.add('incorrect-answer');
     var match = olEle.querySelectorAll("li[isCorrect='true']");
-    match[0].classList.add('actual-answer');
+    if (match.length) {
+      match[0].classList.add('actual-answer', 'noHover');
+    } else {
+      return 0;
+    }
   }
   olEle.removeEventListener('click', checkAnswer);
 }

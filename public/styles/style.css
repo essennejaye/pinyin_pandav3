@@ -50,6 +50,8 @@ body {
 }
 .speech-img {
   width: 225px;
+  background-image: url('../images/Group 5 (1).png');
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -136,13 +138,13 @@ body {
   overflow-y: auto;
 }
 #answers {
+  width: 90%;
   display: flex;
   flex-direction: column;
   margin: 5px;
   padding: 5px;
   font-size: 16px;
-  list-style-type: lower-alpha;
-  list-style-position: inside;
+  list-style: none;
 }
 li {
   margin: 10px 0px;
@@ -163,10 +165,6 @@ li {
 .incorrect-answer {
   background-color: rgba(255, 0, 0, 0.4);
 }
-
-/* li:hover {
-  background-color: #ddd;
-} */
 
 .bottom-box {
   height: 23vh;
@@ -191,18 +189,75 @@ li {
   text-decoration: none;
   color: var(--main-text);
 }
-/* .next-btn:hover {
-  background-color: var(--wheat);
-}
-.end-btn:hover {
-  background-color: red;
-} */
+
 .panda2 {
   margin-top: 45px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 .panda2 img {
   height: 174px;
+}
+
+@media only screen and (min-width: 720px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: auto;
+  }
+  .header {
+    width: 95%;
+  }
+  .hero {
+    width: 95%;
+  }
+  .speech-img {
+    width: 82%;
+    background-image: url('../images/Group 5 (1).png');
+    background-repeat: space;
+  }
+  .container {
+    width: 95%;
+    height: 9vh;
+  }
+  .description p {
+    font-size: 21.5px;
+  }
+  .how-to-play {
+    font-size: 20px;
+  }
+  .word-box {
+    height: 5vh;
+  }
+  #word {
+    font-size: 30px;
+  }
+  .answer-box {
+    height: 28vh;
+  }
+  #answers {
+    font-size: 18px;
+    width: 85%;
+    height: 90%;
+  }
+  li {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+  }
+  li:hover {
+    background-color: #ddd;
+  }
+  .noHover {
+    pointer-events: none;
+  }
+  .li-text {
+    margin-left: 7px;
+  }
+  .next-btn:hover,
+  .play-btn:hover {
+    background-color: var(--wheat);
+  }
+  .end-btn:hover {
+    background-color: red;
+  }
 }
