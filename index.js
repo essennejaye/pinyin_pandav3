@@ -1,9 +1,12 @@
 const app = require('./server');
-const config = require('./configs/configDomain');
+// const config = require('./configs/configDomain');
 const db = require('./configs/connection');
+require('dotenv').config();
+
+const PORT = process.env.PORT || 3000;
 
 db.once('open', () => {
-  app.listen(config.port, () => {
-    console.log(`Server listening on ${config.port}`);
+  app.listen(PORT, () => {
+    console.log(`Server listening on ${PORT}`);
   });
 });
