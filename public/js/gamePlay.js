@@ -35,8 +35,10 @@ function getInputAndAnswer(data) {
 }
 
 function getListItems(text, index) {
+  const p = document.createElement('p');
+  p.append(`${index}.   ${text}`);
   const li = document.createElement('li');
-  li.append(`${index}.   ${text}`);
+  li.append(p);
   if (text === correctAnswer) {
     li.setAttribute('isCorrect', true);
   } else {
@@ -51,7 +53,8 @@ function getAnswerList(data) {
 }
 
 function checkAnswer(event) {
-  const selectedAnswer = event.target.getAttribute('isCorrect');
+  let selectedAnswer = event.target.getAttribute('isCorrect');
+  console.log(event.target);
   event.target.classList.add('noHover');
   if (selectedAnswer == 'true') {
     event.target.classList.add('correct-answer');

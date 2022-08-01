@@ -4,54 +4,21 @@
   --wheat: #eed59eff;
   --moss-green: #909c52ff;
   --main-text: black;
+  --secondary-bg: #f3e1bf;
   --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --main-border: 1px solid var(--antique-bronze);
   --main-border-radius: 7px;
-  --secondary-bg: #f3e1bf;
 }
 
+/* general page styling */
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   background-color: var(--deep-champagne);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Karla', 'Inter', sans-serif;
   color: var(--main-text);
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  width: 95vw;
-  height: 11vh;
-  background-color: var(--moss-green);
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
-  box-shadow: var(--shadow);
-  margin: 16px auto;
-}
-.header-title {
-  font-size: 40px;
-  text-align: center;
-  letter-spacing: 2.6px;
-  text-shadow: var(--shadow);
-  margin: 21.5px auto;
-}
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  width: 98vw;
-  height: 40vh;
-  margin: 50px auto 30px auto;
-}
-.panda-img {
-  width: 150px;
-  margin-left: 10px;
-}
-.speech-img {
-  width: 225px;
-  background-image: url('../images/Group 5 (1).png');
-  background-repeat: no-repeat;
 }
 
 .container {
@@ -59,8 +26,8 @@ body {
   justify-content: center;
   align-items: center;
   width: 95vw;
-  height: 14.5vh;
-  margin: 50px auto;
+  height: 8rem;
+  margin: 1.25rem auto;
   text-align: center;
   box-shadow: var(--shadow);
   border: var(--main-border);
@@ -71,91 +38,168 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 193px;
-  height: 68px;
+  width: 12rem;
+  height: 3.8rem;
   margin: auto;
   background-color: var(--moss-green);
   border: var(--main-border);
   border-radius: 100px/80px;
-  font-size: 27px;
+  font-size: 1.75rem;
   font-weight: bolder;
 }
+span {
+  font-weight: bolder;
+}
+p {
+  font-weight: 700;
+  padding: 0px 3px;
+}
 
-.description {
+/* home screen styling */
+.header,
+.footer {
+  display: flex;
+  align-items: center;
+  width: 95vw;
+  height: 4.75rem;
+  background-color: var(--moss-green);
+  border: var(--main-border);
+  border-radius: var(--main-border-radius);
+  box-shadow: var(--shadow);
+  margin: 0.5rem auto;
+}
+.header-title {
+  font-size: 3.5rem;
+  text-align: center;
+  text-shadow: var(--shadow);
+  margin: auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  width: 98vw;
+  height: 23rem;
+  margin: 1.875rem auto;
+}
+.panda-img {
+  width: 9.375rem;
+  margin-left: 0.625rem;
+}
+.speech-img {
+  width: 14.1rem;
+  background-image: url('../images/speech-bubbles.png');
+  background-repeat: no-repeat;
+}
+
+.description,
+.how-to-play {
   background: var(--secondary-bg);
 }
 .description p {
-  font-size: 16.5px;
-  font-weight: bolder;
-  margin-right: 2px;
-  margin-left: 2px;
-}
-.description span {
-  letter-spacing: 2.6px;
+  font-size: 1.02rem;
+  margin: 0.375rem auto;
 }
 
+.play-btn {
+  margin: 2rem auto;
+}
 .play-btn a {
   text-decoration: none;
   color: var(--main-text);
 }
 .play-btn img {
-  width: 22px;
-  height: 22px;
+  width: 1.375rem;
+  height: 1.31rem;
   transform: rotate(90deg);
-  margin-left: 15px;
+  margin-left: 0.95rem;
 }
 
+.footer {
+  font-size: 1.2rem;
+  justify-content: space-evenly;
+  height: 2.1rem;
+  margin-top: 1.1rem;
+}
+span#footer-date {
+  font-weight: 500;
+}
+.links {
+  display: flex;
+}
+.links a {
+  display: flex;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+/* game play html styling */
 .how-to-play {
-  width: 92vw;
-  margin: 30px auto;
-  padding: 4px 7px;
-  height: 16vh;
+  margin: 0.5rem auto;
+  height: 9.125rem;
   text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  background: var(--secondary-bg);
+  font-size: 1.05rem;
 }
-
+/* input container */
 .word-box {
-  margin: 30px auto;
-  height: 4vh;
+  margin: 2rem auto 0.65rem auto;
+  height: 2.25rem;
   background-color: white;
-  border: var(--main-border);
+  overflow-x: scroll;
 }
 #word {
   width: 100%;
   border: none;
   text-align: center;
   letter-spacing: 1.1px;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
+/* answer container */
 .answer-box {
-  height: 28vh;
-  margin: 30px auto 20px auto;
+  height: 16rem;
+  margin: 0.65rem auto 1rem auto;
   border: none;
   box-shadow: none;
-  overflow-y: auto;
 }
 #answers {
-  width: 90%;
+  width: 95%;
   display: flex;
   flex-direction: column;
-  margin: 5px;
-  padding: 5px;
-  font-size: 16px;
+  align-items: center;
+  margin: 0.3125rem;
+  padding: 0;
+  font-size: 1rem;
   list-style: none;
+  pointer-events: none;
 }
+
 li {
-  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 2.5rem;
+  margin: 0.625rem 0;
   padding: 3px 5px;
   text-align: justify;
   font-weight: 700;
   background: #ffffff;
-  border-radius: 3px;
+  border-radius: var(--main-border-radius);
   box-shadow: var(--shadow);
+  overflow-y: auto;
   cursor: pointer;
+  pointer-events: auto;
 }
+li > p {
+  display: flex;
+  align-self: safe center;
+  width: 98%;
+  height: 2.3rem;
+  padding: 3px;
+  margin: 0;
+  pointer-events: none;
+}
+
 .actual-answer {
   border: 5px solid rgba(42, 117, 50, 0.6);
 }
@@ -166,92 +210,127 @@ li {
   background-color: rgba(255, 0, 0, 0.4);
 }
 
+/* button container and image */
 .bottom-box {
-  height: 23vh;
-  margin: 30px 10px 10px 10px;
+  height: 13rem;
+  margin: 0.65rem;
   border: none;
   box-shadow: none;
 }
 .next-btn,
 .end-btn {
-  width: 105px;
-  height: 49px;
-  font-size: 16px;
+  width: 6.5rem;
+  height: 3rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 .next-btn {
-  margin: 8px auto 72px 0px;
+  margin: 0.5rem auto 4.5rem 0;
 }
 .end-btn {
-  margin: 8px 0px 72px auto;
+  margin: 0.5rem 0 4.5rem auto;
 }
 .end-btn a {
   text-decoration: none;
   color: var(--main-text);
 }
-
 .panda2 {
-  margin-top: 45px;
+  margin-top: 2.75rem;
 }
 .panda2 img {
-  height: 174px;
+  height: 10.9rem;
 }
 
-@media only screen and (min-width: 720px) {
+/* start of media queries */
+@media (max-width: 395px) {
+  .how-to-play {
+    font-size: 0.98rem;
+  }
+  .word-box {
+    margin: 1rem auto 0.65rem auto;
+  }
+}
+
+@media (min-width: 768px) {
   body {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
+    width: 95vw;
     margin: auto;
-  }
-  .header {
-    width: 95%;
-  }
-  .hero {
-    width: 95%;
-  }
-  .speech-img {
-    width: 82%;
-    background-image: url('../images/Group 5 (1).png');
-    background-repeat: space;
+    font-size: 1.25rem;
   }
   .container {
     width: 95%;
-    height: 9vh;
+    margin: 0.5rem auto 1rem auto;
+  }
+
+  /* home screen styling */
+  .header {
+    width: 95%;
+  }
+  .header-title {
+    font-size: 4.5rem;
+  }
+
+  .hero {
+    width: 90%;
+    height: 29rem;
+  }
+  .speech-img {
+    width: 82%;
+    background-repeat: round;
+  }
+  .description {
+    margin: 1rem;
   }
   .description p {
-    font-size: 21.5px;
+    font-size: 1.13em;
   }
+
+  .play-btn {
+    margin: 3rem auto;
+  }
+
+  .footer {
+    width: 95%;
+    height: 3rem;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+  }
+
+  /* game play styling */
   .how-to-play {
-    font-size: 20px;
+    font-size: 1.36rem;
+    margin: 1rem auto;
   }
   .word-box {
-    height: 5vh;
+    height: 3rem;
+    margin: 1rem;
   }
   #word {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   .answer-box {
-    height: 28vh;
+    height: 18.1875rem;
   }
   #answers {
-    font-size: 18px;
-    width: 85%;
+    font-size: 1.5rem;
     height: 90%;
   }
   li {
-    height: 10vh;
     display: flex;
     align-items: center;
+    height: 3rem;
   }
+  .bottom-box {
+    margin: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
   li:hover {
     background-color: #ddd;
   }
   .noHover {
     pointer-events: none;
-  }
-  .li-text {
-    margin-left: 7px;
   }
   .next-btn:hover,
   .play-btn:hover {
@@ -259,5 +338,8 @@ li {
   }
   .end-btn:hover {
     background-color: red;
+  }
+  .links img {
+    height: 2.125rem;
   }
 }
