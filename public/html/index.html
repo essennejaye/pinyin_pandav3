@@ -47,7 +47,7 @@
     </button>
 
     <footer class="footer">
-      <span id="footer-date">EssenneJaye &copy; 2022</span>
+      <span id="footer-date"></span>
       <div class="links">
         <a href="https://github.com/essennejaye">
           <img src="../images/github_black.png" alt="github icon" id="gh" />
@@ -57,5 +57,10 @@
         </a>
       </div>
     </footer>
+    <script>
+      document.getElementById(
+        'footer-date'
+      ).innerHTML = `EssenneJaye &copy ${new Date().getFullYear()}`;
+    </script>
   </body>
 </html>

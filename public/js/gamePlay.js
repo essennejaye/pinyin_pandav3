@@ -6,6 +6,11 @@ newWord.addEventListener('click', getNewWord);
 
 let correctAnswer;
 
+// var dateYear = new Date().getFullYear();
+// document.getElementById(
+//   'footer-date'
+// ).innerHTML = `EssenneJaye &copy ${dateYear}`;
+
 function getNewWord() {
   fetch('/dict_entries')
     .then((response) => {
@@ -54,7 +59,6 @@ function getAnswerList(data) {
 
 function checkAnswer(event) {
   let selectedAnswer = event.target.getAttribute('isCorrect');
-  console.log(event.target);
   event.target.classList.add('noHover');
   if (selectedAnswer == 'true') {
     event.target.classList.add('correct-answer');

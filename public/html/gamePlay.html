@@ -47,14 +47,14 @@
     <div class="container bottom-box">
       <button class="button next-btn" id="next-btn">Get Word</button>
       <div class="panda2">
-        <img src="../images/panda3.jpg" alt="panda" />
+        <img src="../images/panda2.jpg" alt="panda" />
       </div>
       <button class="button end-btn" id="end-btn"><a href="index.html">
         End Game </a></button>
     </div>
 
     <footer class="footer">
-      <span id="footer-date">EssenneJaye &copy; 2022</span>
+      <span id="footer-date"></span>
       <div class="links">
         <a href="https://github.com/essennejaye">
           <img src="../images/github_black.png" alt="github icon" id="gh" />
@@ -65,6 +65,11 @@
       </div>
     </footer>
 
+    <script>
+      document.getElementById(
+        'footer-date'
+      ).innerHTML = `EssenneJaye &copy ${new Date().getFullYear()}`;
+    </script>
     <script src="../js/gamePlay.js"></script>
 
   </body>
