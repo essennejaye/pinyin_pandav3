@@ -12,9 +12,9 @@
   public\images\pinyin_panda_ss1.png
   public\images\pinyin_panda_ss.png
 
-The game play page gives brief instruction on how to play. When the user clicks the get word button a pinyin word or phrase replaces the “PīnYīn” placeholder, and 4 possible English translations are presented in a list.
-When the user chooses the correct answer, the background of the selected answer is highlighted in green. If the user chooses the incorrect answer, the background of the selected answer is highlighted in red, and the correct answer is highlighted with a green border.
-The user may continue to get new words or phrases with possible translations if desired.
-When the user clicks the End Game button, they are returned to the home page.
+- The game play page gives brief instruction on how to play. When the user clicks the get word button a pinyin word or phrase replaces the “PīnYīn” placeholder, and 4 possible English translations are presented in a list.
+- When the user chooses the correct answer, the background of the selected answer is highlighted in green. If the user chooses the incorrect answer, the background of the selected answer is highlighted in red, and the correct answer is highlighted with a green border.
+- The user may continue to get new words or phrases with possible translations if desired.
+- When the user clicks the End Game button, they are returned to the home page.
 public\images\pinyin_panda_ss2.png
 public\images\pinyin_panda_ss3.png
