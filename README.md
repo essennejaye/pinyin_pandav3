@@ -9,13 +9,6 @@
 ### How to Play
 
 - The home page gives a brief description of the app. When the user hits the Play Now button, they are taken to the game play page.
-<<<<<<< HEAD
-
-The game play page gives brief instruction on how to play. When the user clicks the get word button a pinyin word or phrase replaces the “PīnYīn” placeholder, and 4 possible English translations are presented in a list.
-When the user chooses the correct answer, the background of the selected answer is highlighted in green. If the user chooses the incorrect answer, the background of the selected answer is highlighted in red, and the correct answer is highlighted with a green border.
-The user may continue to get new words or phrases with possible translations if desired.
-When the user clicks the End Game button, they are returned to the home page.
-=======
 ![pinyin_panda_ss1](https://user-images.githubusercontent.com/26013167/182531031-0ecc5789-d698-44d2-9356-f4859a5445f2.png)
 
 - The game play page gives brief instruction on how to play. When the user clicks the Get Word button a pinyin word or phrase replaces the PīnYīn placeholder, and 4 possible English translations are presented in a list.
@@ -28,4 +21,4 @@ When the user clicks the End Game button, they are returned to the home page.
 - The user may continue to get new words or phrases with possible translations if desired.
 - When the user clicks the End Game button, they are returned to the home page.
 
->>>>>>> f8e9474d44c0cddecbe0cb4f159bc0d1bfd6d76c
+
