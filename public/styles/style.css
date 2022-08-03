@@ -49,6 +49,7 @@ body {
 }
 span {
   font-weight: bolder;
+  text-decoration: underline;
 }
 p {
   font-weight: 500;
@@ -102,7 +103,7 @@ p {
 }
 
 .play-btn {
-  margin: 2rem auto;
+  margin: 3rem auto;
 }
 .play-btn a {
   text-decoration: none;
@@ -242,6 +243,14 @@ li > p {
 }
 
 /* start of media queries */
+@media (max-width: 360px) {
+  .header-title {
+    font-size: 3rem;
+  }
+  .hero {
+    width: 100vw;
+  }
+}
 @media (max-width: 395px) {
   .how-to-play {
     font-size: 0.98rem;
