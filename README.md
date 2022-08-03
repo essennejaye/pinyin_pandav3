@@ -9,12 +9,15 @@
 ### How to Play
 
 - The home page gives a brief description of the app. When the user hits the Play Now button, they are taken to the game play page.
-  public\images\pinyin_panda_ss1.png
-  public\images\pinyin_panda_ss.png
+![pinyin_panda_ss1](https://user-images.githubusercontent.com/26013167/182531031-0ecc5789-d698-44d2-9356-f4859a5445f2.png)
 
-- The game play page gives brief instruction on how to play. When the user clicks the get word button a pinyin word or phrase replaces the “PīnYīn” placeholder, and 4 possible English translations are presented in a list.
+- The game play page gives brief instruction on how to play. When the user clicks the Get Word button a pinyin word or phrase replaces the PīnYīn placeholder, and 4 possible English translations are presented in a list.
+  ![pinyin_panda_ss](https://user-images.githubusercontent.com/26013167/182531116-ffe2084a-fc95-4ee7-806f-6397aec3cef4.png)
+
 - When the user chooses the correct answer, the background of the selected answer is highlighted in green. If the user chooses the incorrect answer, the background of the selected answer is highlighted in red, and the correct answer is highlighted with a green border.
+  ![pinyin_panda_ss2](https://user-images.githubusercontent.com/26013167/182531152-52cd2156-70d5-48c2-a1ac-f8b919d9ebec.png)
+  ![pinyin_panda_ss3](https://user-images.githubusercontent.com/26013167/182531159-4a6b7cf1-8727-4343-8c62-1dec0e4dad23.png)
+
 - The user may continue to get new words or phrases with possible translations if desired.
 - When the user clicks the End Game button, they are returned to the home page.
-public\images\pinyin_panda_ss2.png
-public\images\pinyin_panda_ss3.png
+
