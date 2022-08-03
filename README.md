@@ -8,8 +8,6 @@
 
 ### How to Play
 
-![Short video of game play.](https://drive.google.com/file/d/16HnroylWAjRJfZ4JgXf-2CbpDYWaEDBh/view)
-
 - The home page gives a brief description of the app. When the user hits the Play Now button, they are taken to the game play page.
   ![pinyin_panda_ss1](https://user-images.githubusercontent.com/26013167/182531031-0ecc5789-d698-44d2-9356-f4859a5445f2.png)
 
