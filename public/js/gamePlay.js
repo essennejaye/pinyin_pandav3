@@ -2,39 +2,34 @@ const wordInput = document.getElementById('word');
 const newWord = document.getElementById('next-btn');
 let olEle = document.getElementById('answers');
 
-newWord.addEventListener('click', getNewWord);
+// newWord.addEventListener('click', getNewWord);
 
 let correctAnswer;
 
-// var dateYear = new Date().getFullYear();
-// document.getElementById(
-//   'footer-date'
-// ).innerHTML = `EssenneJaye &copy ${dateYear}`;
-
-function getNewWord() {
-  fetch('/dict_entries')
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then((data) => {
-      getInputAndAnswer(data);
-    })
-    .catch((error) => {
-      console.error(
-        'There has been a problem with your fetch operation: ',
-        error
-      );
-    });
-}
+// function getNewWord() {
+//   fetch('/dict_entries')
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//       }
+//       return response.json();
+//     })
+//     .then((data) => {
+//       getInputAndAnswer(data);
+//     })
+//     .catch((error) => {
+//       console.error(
+//         'There has been a problem with your fetch operation: ',
+//         error
+//       );
+//     });
+// }
 
 function getInputAndAnswer(data) {
   let rowIndex = Math.floor(Math.random() * data.length);
   let randomRow = data[rowIndex];
   wordInput.value = randomRow.pinyin;
-  correctAnswer = randomRow.english;
+  correctAnswer = randomRow.english.join(', ');
   document.querySelector('ol').replaceChildren(...getAnswerList(data));
   olEle.addEventListener('click', checkAnswer);
 }
@@ -53,7 +48,8 @@ function getListItems(text, index) {
 }
 
 function getAnswerList(data) {
-  let liElements = data.map(({ english }) => english);
+  let liElementsArrays = data.map(({ english }) => english);
+  let liElements = liElementsArrays.map((array) => array.join(', '));
   return liElements.map((item, index) => getListItems(item, index + 1));
 }
 

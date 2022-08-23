@@ -31,7 +31,7 @@ const router = express.Router();
 // });
 
 router.get('/dict_entries', (req, res) => {
-  Dictionary.aggregate([{ $sample: { size: 4 } }], function (err, results) {
+  Dictionary.aggregate([{ $sample: { size: 20 } }], function (err, results) {
     try {
       res.send(results);
     } catch (err) {
