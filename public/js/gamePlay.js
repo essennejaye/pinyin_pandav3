@@ -1,34 +1,18 @@
+import { getListItemsData } from './createDb.js';
+
 const wordInput = document.getElementById('word');
 const newWord = document.getElementById('next-btn');
 let olEle = document.getElementById('answers');
 
-// newWord.addEventListener('click', getNewWord);
+newWord.addEventListener('click', getInputAndAnswer);
 
 let correctAnswer;
 
-// function getNewWord() {
-//   fetch('/dict_entries')
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw new Error('Network response was not ok');
-//       }
-//       return response.json();
-//     })
-//     .then((data) => {
-//       getInputAndAnswer(data);
-//     })
-//     .catch((error) => {
-//       console.error(
-//         'There has been a problem with your fetch operation: ',
-//         error
-//       );
-//     });
-// }
-
-function getInputAndAnswer(data) {
+async function getInputAndAnswer() {
+  let data = await getListItemsData();
   let rowIndex = Math.floor(Math.random() * data.length);
   let randomRow = data[rowIndex];
-  wordInput.value = randomRow.pinyin;
+  wordInput.value = randomRow['pinyin'];
   correctAnswer = randomRow.english.join(', ');
   document.querySelector('ol').replaceChildren(...getAnswerList(data));
   olEle.addEventListener('click', checkAnswer);
