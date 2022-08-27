@@ -3,7 +3,7 @@
   "name": "pinyin_pandav3",
   "builds": [
     {
-      "src": "/index.js",
+      "src": "index.js",
       "use": "@vercel/node"
     }
   ],
