@@ -20,7 +20,7 @@ app.get('/api/item/:slug', (req, res) => {
   res.end(`Item: ${slug}`);
 });
 
-app.use(express.static(path.join(__dirname, 'public', 'html')));
+// app.use(express.static(path.join(__dirname, 'public', 'html')));
 // app.use(express.static('public'));
 
 app.use('/', routes);
