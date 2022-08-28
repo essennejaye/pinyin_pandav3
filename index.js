@@ -1,4 +1,3 @@
-// const app = require('../server');
 const db = require('./configs/connection');
 const express = require('express');
 const routes = require('./router');
