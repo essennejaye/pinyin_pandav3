@@ -29,7 +29,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.get('dictionary', (req, res) => {
+app.get('/api/dictionary', (req, res) => {
   res.status(200).json({ id: 1, text: 'Test Endpoint Description' });
 });
 
