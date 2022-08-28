@@ -4,7 +4,7 @@ const Dictionary = require('../models/Dictionary');
 
 const dictionary = express.Router();
 
-dictionary.get('test-endpoint', (req, res) => {
+dictionary.get('dictionary', (req, res) => {
   res.status(200).json({ id: 1, text: 'Test Endpoint Description' });
 });
 
