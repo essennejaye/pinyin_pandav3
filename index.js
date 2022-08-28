@@ -8,9 +8,9 @@ const app = express();
 // app.use(express.static(path.join(__dirname, 'public', 'html')));
 // app.use(express.static('public'));
 
-app.use('/api/', routes);
-
 const PORT = process.env.PORT || 3000;
+
+app.use('/api/', routes);
 
 db.once('open', () => {
   app.listen(PORT, () => {
