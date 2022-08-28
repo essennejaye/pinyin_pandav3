@@ -11,15 +11,15 @@
   ],
   "routes": [
     {
-      "src": "/.routes",
-      "dest": "index.js"
+      "src": "/dict_entries/(.*)",
+      "dest": "router.js"
     },
     {
       "src": "/",
-      "dest": "public/index.html"
+      "dest": "public/html/index.html"
     },
     {
-      "src": ".(.*)",
+      "src": "/(.*)",
       "dest": "public/$1"
     }
   ]

@@ -4,8 +4,6 @@ const express = require('express');
 const routes = require('./router');
 const path = require('path');
 
-const { v4 } = require('uuid');
-
 const app = express();
 
 // app.use(express.static(path.join(__dirname, 'public', 'html')));
