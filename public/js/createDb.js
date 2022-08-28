@@ -63,24 +63,50 @@ function checkNumOfDictStoreEntries() {
 }
 
 function fetchDataFromMongoDB() {
+  var responseClone;
   fetch('api/dict_entries_test')
     .then((response) => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+      responseClone = response.clone();
       return response.json();
     })
     .then((data) => {
-      console.log(JSON.parse(data));
-      // seedIndexedDB(data);
-    })
-    .catch((error) => {
-      console.error(
-        'There has been a problem with your fetch operation: ',
-        error
-      );
-    });
+      console.log(data);
+    }),
+    function (rejectionReason) {
+      console.log(
+        'Error parsing JSON from response:',
+        rejectionReason,
+        responseClone
+      ); // 4
+      responseClone
+        .text() // 5
+        .then(function (bodyText) {
+          console.log(
+            'Received the following instead of valid JSON:',
+            bodyText
+          );
+        });
+    };
 }
+
+// function fetchDataFromMongoDB() {
+//   fetch('api/dict_entries_test')
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//       }
+//       return response.json();
+//     })
+//     .then((data) => {
+//       seedIndexedDB(data);
+//     })
+//     .catch((error) => {
+//       console.error(
+//         'There has been a problem with your fetch operation: ',
+//         error
+//       );
+//     });
+// }
 
 function seedIndexedDB(data) {
   const transaction = db.transaction('dictionary_os', 'readwrite');
