@@ -4,7 +4,7 @@ const Dictionary = require('./models/Dictionary');
 
 const router = express.Router();
 
-router.get('/dict_entries_test', (req, res) => {
+router.get('api/dict_entries_test', (req, res) => {
   res.status(200).json({ id: 1, text: 'Test Endpoint Description' });
 });
 

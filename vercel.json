@@ -11,7 +11,7 @@
   ],
   "routes": [
     {
-      "src": "/dict_entries_test/(.*)",
+      "src": "/api/(.*)",
       "dest": "router.js"
     },
     {
