@@ -1,4 +1,4 @@
-// import { openDB } from 'https://cdn.jsdelivr.net/npm/idb@7/+esm';
+import { openDB } from 'https://cdn.jsdelivr.net/npm/idb@7/+esm';
 
 let db;
 
@@ -52,8 +52,7 @@ function checkNumOfDictStoreEntries() {
     let recordCount = countRequest.result;
     console.log(`Number of remaining records is ${recordCount}`);
     if (recordCount < 40) {
-      // fetchDataFromMongoDB();
-      console.log(recordCount);
+      fetchDataFromMongoDB();
     }
   };
   countRequest.onerror = (event) => {
@@ -63,51 +62,24 @@ function checkNumOfDictStoreEntries() {
   };
 }
 
-// function fetchDataFromMongoDB() {
-//   var responseClone;
-//   fetch('api/test-endpoint')
-//     .then((response) => {
-//       responseClone = response.clone();
-//       return response.json();
-//     })
-//     .then((data) => {
-//       console.log(data);
-//     }),
-//     function (rejectionReason) {
-//       console.log(
-//         'Error parsing JSON from response:',
-//         rejectionReason,
-//         responseClone
-//       ); // 4
-//       responseClone
-//         .text() // 5
-//         .then(function (bodyText) {
-//           console.log(
-//             'Received the following instead of valid JSON:',
-//             bodyText
-//           );
-//         });
-//     };
-// }
-
-// function fetchDataFromMongoDB() {
-//   fetch('api/dict_entries_test')
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw new Error('Network response was not ok');
-//       }
-//       return response.json();
-//     })
-//     .then((data) => {
-//       seedIndexedDB(data);
-//     })
-//     .catch((error) => {
-//       console.error(
-//         'There has been a problem with your fetch operation: ',
-//         error
-//       );
-//     });
-// }
+function fetchDataFromMongoDB() {
+  fetch('/api/dictionary')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      seedIndexedDB(data);
+    })
+    .catch((error) => {
+      console.error(
+        'There has been a problem with your fetch operation: ',
+        error
+      );
+    });
+}
 
 function seedIndexedDB(data) {
   const transaction = db.transaction('dictionary_os', 'readwrite');
