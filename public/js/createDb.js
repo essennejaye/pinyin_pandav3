@@ -29,7 +29,7 @@ function openIndexDb() {
     // define schema
     objectStore.createIndex('traditional', 'traditional', { unique: false });
     objectStore.createIndex('simplified', 'simplified', { unique: false });
-    objectStore.createIndex('pinyin', 'pinyin', { unique: true });
+    objectStore.createIndex('pinyin', 'pinyin', { unique: false });
     objectStore.createIndex('english', ['english'], { unique: false });
     objectStore.createIndex('created', 'date', { unique: false });
     console.log('Database setup complete');
