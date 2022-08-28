@@ -68,10 +68,10 @@ function fetchDataFromMongoDB() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
+      console.log('actual response');
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       // seedIndexedDB(data);
     })
     .catch((error) => {
