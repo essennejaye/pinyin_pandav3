@@ -52,7 +52,8 @@ function checkNumOfDictStoreEntries() {
     let recordCount = countRequest.result;
     console.log(`Number of remaining records is ${recordCount}`);
     if (recordCount < 40) {
-      fetchDataFromMongoDB();
+      // fetchDataFromMongoDB();
+      console.log(recordCount);
     }
   };
   countRequest.onerror = (event) => {
