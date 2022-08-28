@@ -62,32 +62,32 @@ function checkNumOfDictStoreEntries() {
   };
 }
 
-function fetchDataFromMongoDB() {
-  var responseClone;
-  fetch('api/dict_entries_test')
-    .then((response) => {
-      responseClone = response.clone();
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data);
-    }),
-    function (rejectionReason) {
-      console.log(
-        'Error parsing JSON from response:',
-        rejectionReason,
-        responseClone
-      ); // 4
-      responseClone
-        .text() // 5
-        .then(function (bodyText) {
-          console.log(
-            'Received the following instead of valid JSON:',
-            bodyText
-          );
-        });
-    };
-}
+// function fetchDataFromMongoDB() {
+//   var responseClone;
+//   fetch('api/test-endpoint')
+//     .then((response) => {
+//       responseClone = response.clone();
+//       return response.json();
+//     })
+//     .then((data) => {
+//       console.log(data);
+//     }),
+//     function (rejectionReason) {
+//       console.log(
+//         'Error parsing JSON from response:',
+//         rejectionReason,
+//         responseClone
+//       ); // 4
+//       responseClone
+//         .text() // 5
+//         .then(function (bodyText) {
+//           console.log(
+//             'Received the following instead of valid JSON:',
+//             bodyText
+//           );
+//         });
+//     };
+// }
 
 // function fetchDataFromMongoDB() {
 //   fetch('api/dict_entries_test')
