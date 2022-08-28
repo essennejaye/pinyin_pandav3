@@ -12,7 +12,7 @@
   "routes": [
     {
       "src": "/.routes",
-      "use": "index.js"
+      "dest": "index.js"
     },
     {
       "src": "/",
@@ -22,7 +22,5 @@
       "src": ".(.*)",
       "dest": "public/$1"
     }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  ]
 }
