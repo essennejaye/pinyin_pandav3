@@ -9,7 +9,9 @@ app.get('/api/dictionary', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-db.once('open', () => {});
+db.once('open', () => {
+  console.log('Mongo DB connected');
+});
 
 module.exports = app;
 
