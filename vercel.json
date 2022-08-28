@@ -17,7 +17,7 @@
     {
       "src": "/",
       "dest": "public/html/index.html"
-    }
+    },
     {
       "src": "/index.html",
       "dest": "public/html/index.html"
