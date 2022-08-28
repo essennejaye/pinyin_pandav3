@@ -1,10 +1,10 @@
 require('dotenv').config();
 const express = require('express');
-const Dictionary = require('./models/Dictionary');
+const Dictionary = require('../models/Dictionary');
 
-const router = express.Router();
+const dictionary = express.Router();
 
-router.get('/api/test-endpoint', (req, res) => {
+dictionary.get('test-endpoint', (req, res) => {
   res.status(200).json({ id: 1, text: 'Test Endpoint Description' });
 });
 
@@ -18,4 +18,4 @@ router.get('/api/test-endpoint', (req, res) => {
 //   });
 // });
 
-module.exports = router;
+module.exports = dictionary;
