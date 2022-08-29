@@ -10,8 +10,8 @@
   "repository": "https://github.com/essennejaye/pinyin_pandav3",
   "main": "index.js",
   "scripts": {
-    "test": "set NODE_ENV=test&& node index.js",
-    "production": "set NODE_ENV=production&& node index.js"
+    "start": "node index.js",
+    "start-local": "node index.js local"
   },
   "keywords": [
     "mandarin",

@@ -14,9 +14,10 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "local",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}\\index.js",
+      "args": ["local"],
 
       "serverReadyAction": {
         "pattern": "listening on port ([0-9]+)",

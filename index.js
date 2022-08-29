@@ -8,7 +8,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-if (process.NODE_ENV === 'test') {
+if (process.argv.includes('local')) {
   app.use(express.static(path.join(__dirname, 'public', 'html')));
   app.use(express.static('public'));
 }
@@ -24,11 +24,9 @@ app.get('/api/dictionary', (req, res) => {
 });
 
 db.once('open', () => {
-  if (process.NODE_ENV === 'test') {
-    app.listen(PORT, () => {
-      console.log(`Server listening on ${PORT}`);
-    });
-  }
+  app.listen(PORT, () => {
+    console.log(`Server listening on ${PORT}`);
+  });
 });
 
 module.exports = app;
