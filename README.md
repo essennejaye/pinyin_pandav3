@@ -4,7 +4,7 @@
 - Mandarin Chinese syllables depend on inflection or tone to derive meaning. The tones in this application are represented as a number added to the end of a syllable.
 - This app assumes the learner has some prior knowledge of Mandarin tones and basic pronunciation of initials and finals ( the fundamental elements in pinyin).
 - The pinyin and the translations are retrieved from a MongoDB seeded from the [CC-CEDICT](https://cc-cedict.org/wiki/), an online, downloadable public-domain Chinese-English dictionary. CC-CEDICT is licensed under a [Creative Commons Attribution-Share Alike 3.0 License](https://creativecommons.org/licenses/by-sa/3.0/). Thanks to Franki Allegra whose [Python parser](https://github.com/rubber-duck-dragon/rubber-duck-dragon.github.io/blob/master/cc-cedict_parser/parser.py) was the basis for the JavaScript parser I used in my seeding program (that code is not part of this repo).
-  [Pinyin Panda](https://pinyin-panda.herokuapp.com/) is available at https://pinyin-panda.herokuapp.com/. It was developed using HTML, CSS, and vanilla JavaScript. It uses an Express server on top of Node and Mongoose to query the MongoDB.
+  [Pinyin Panda](https://pinyin-panda.herokuapp.com/) is available at https://pinyin-pandav3.vercel.app. It was developed using HTML, CSS, and vanilla JavaScript. It uses an Express server on top of Node and Mongoose to query the MongoDB.
 
 ### How to Play
 
