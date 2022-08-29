@@ -27,11 +27,8 @@ function openIndexDb() {
       autoIncrement: true,
     });
     // define schema
-    objectStore.createIndex('traditional', 'traditional', { unique: false });
     objectStore.createIndex('simplified', 'simplified', { unique: false });
     objectStore.createIndex('pinyin', 'pinyin', { unique: false });
-    objectStore.createIndex('english', ['english'], { unique: false });
-    objectStore.createIndex('created', 'date', { unique: false });
     console.log('Database setup complete');
   };
   openRequest.onerror = function (event) {
@@ -94,7 +91,6 @@ function seedIndexedDB(data) {
         simplified: data[i]['simplified'],
         pinyin: data[i]['pinyin'],
         english: data[i]['english'],
-        created: new Date(),
       };
     }
     let addRequest = objectStore.add(newEntry);
