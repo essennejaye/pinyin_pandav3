@@ -25,7 +25,7 @@ app.get('/api/dictionary', (req, res) => {
 
 db.once('open', () => {
   app.listen(PORT, () => {
-    console.log(`Server listening on ${PORT}`);
+    console.log(`Server listening on port ${PORT}`);
   });
 });
 

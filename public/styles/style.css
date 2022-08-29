@@ -287,10 +287,11 @@ li > p {
     background-repeat: round;
   }
   .description {
-    margin: 1rem;
+    margin: 1rem auto;
   }
   .description p {
-    font-size: 1.13em;
+    margin: 0.7rem;
+    font-size: 1.65rem;
   }
 
   .play-btn {
@@ -298,9 +299,10 @@ li > p {
   }
 
   .footer {
+    position: absolute;
+    bottom: 0.5rem;
     width: 95%;
     height: 3rem;
-    margin-top: 1.5rem;
     font-size: 2rem;
   }
 

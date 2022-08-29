@@ -20,7 +20,7 @@
       "args": ["local"],
 
       "serverReadyAction": {
-        "pattern": "listening on port ([0-9]+)",
+        "pattern": "Server listening on port ([0-9]+)",
         "uriFormat": "http://localhost:%s",
         "action": "openExternally"
       }
