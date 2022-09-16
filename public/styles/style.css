@@ -163,7 +163,7 @@ span#footer-date {
   border: none;
   box-shadow: none;
 }
-#answers {
+#btn-answers {
   width: 95%;
   display: flex;
   flex-direction: column;
@@ -172,29 +172,45 @@ span#footer-date {
   margin: 0.3125rem;
   padding: 0;
   font-size: 1rem;
-  list-style: none;
   pointer-events: none;
 }
 
-li {
-  height: 2.5rem;
+.btn-answer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 3rem;
   padding: 3px 5px;
   text-align: justify;
   font-weight: 700;
   background: #ffffff;
   border-radius: var(--main-border-radius);
   box-shadow: var(--shadow);
-  overflow-y: auto;
+}
+
+.answer-txt {
+  text-overflow: ellipsis;
+  text-decoration: none;
+  line-height: 1.2rem;
+  overflow: hidden;
+  width: calc(90%);
+  white-space: nowrap;
+  display: inline-block;
+  padding: 3px;
+  margin: 0;
   cursor: pointer;
   pointer-events: auto;
 }
-li > p {
-  display: flex;
-  width: 98%;
-  height: 2.3rem;
-  padding: 3px;
-  margin: 0;
-  pointer-events: none;
+.answer-txtShow {
+  overflow: visible;
+  height: auto;
+}
+.overflow-btn {
+  width: 4.5rem;
+  height: 1.5rem;
+  font-size: 0.5rem;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .actual-answer {

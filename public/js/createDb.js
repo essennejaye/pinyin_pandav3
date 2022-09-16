@@ -28,7 +28,6 @@ function openIndexDb() {
     });
     // define schema
     objectStore.createIndex('simplified', 'simplified', { unique: false });
-    objectStore.createIndex('pinyin', 'pinyin', { unique: false });
     console.log('Database setup complete');
   };
   openRequest.onerror = function (event) {
