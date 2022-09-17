@@ -55,7 +55,7 @@ function getExpandBtns() {
     if (answerSpanElement[i].offsetWidth < answerSpanElement[i].scrollWidth) {
       const btnAnswerExpand = document.createElement('button');
       btnAnswerExpand.classList.add('overflow-btn');
-      btnAnswerExpand.innerHTML = 'See More';
+      btnAnswerExpand.innerHTML = '&#187;';
       btnAnswerExpand.addEventListener('click', toggleExpandedText);
       btnContainerElement[i].appendChild(btnAnswerExpand);
       btnAnswerDiv.replaceChild(
@@ -98,9 +98,11 @@ function checkAnswer(event) {
 
 function toggleExpandedText(e) {
   e.stopPropagation();
-  let element = e.target.previousSibling;
-  let elementParent = e.target.parentNode;
-  element.classList.toggle('answer-txtShow');
-  elementParent.classList.toggle('btn-answerShow');
+  let btnElement = e.target;
+  let answerElement = e.target.previousSibling;
+  let btnElementParent = e.target.parentNode;
+  answerElement.classList.toggle('answer-txtShow');
+  btnElementParent.classList.toggle('btn-answerShow');
+  btnElement.classList.toggle('overflow-btnDn');
   return;
 }

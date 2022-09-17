@@ -208,11 +208,15 @@ span#footer-date {
   height: fit-content;
 }
 .overflow-btn {
-  width: 3.5rem;
-  height: 1.5rem;
-  font-size: 0.5rem;
+  border: none;
+  background: transparent;
+  font-size: 1.75rem;
+  transform: rotate(90deg);
   cursor: pointer;
   pointer-events: auto;
+}
+.overflow-btnDn {
+  transform: rotate(-90deg);
 }
 
 .actual-answer {
