@@ -202,11 +202,13 @@ span#footer-date {
   pointer-events: auto;
 }
 .answer-txtShow {
-  overflow: visible;
-  height: auto;
+  white-space: break-spaces;
+}
+.btn-answerShow {
+  height: fit-content;
 }
 .overflow-btn {
-  width: 4.5rem;
+  width: 3.5rem;
   height: 1.5rem;
   font-size: 0.5rem;
   cursor: pointer;
@@ -330,6 +332,7 @@ span#footer-date {
   .word-box {
     height: 3rem;
     margin: 1rem;
+    align-self: center;
   }
   #word {
     font-size: 1.875rem;
