@@ -187,6 +187,9 @@ span#footer-date {
   border-radius: var(--main-border-radius);
   box-shadow: var(--shadow);
 }
+.btn-answerShow {
+  height: fit-content;
+}
 
 .answer-txt {
   text-overflow: ellipsis;
@@ -204,19 +207,27 @@ span#footer-date {
 .answer-txtShow {
   white-space: break-spaces;
 }
-.btn-answerShow {
-  height: fit-content;
-}
+
 .overflow-btn {
   border: none;
   background: transparent;
-  font-size: 1.75rem;
-  transform: rotate(90deg);
+  padding: 0;
+  display: flex;
   cursor: pointer;
   pointer-events: auto;
+  opacity: 0.8;
+  width: 1.5rem;
+  transform: rotate(0deg);
+  transition: transform 0.25s linear;
 }
-.overflow-btnDn {
-  transform: rotate(-90deg);
+.overflow-btn img {
+  height: 1.5rem;
+  width: 1.5rem;
+  pointer-events: none;
+}
+.overflow-btnOpen {
+  transform: rotate(180deg);
+  transition: transform 0.25s linear;
 }
 
 .actual-answer {

@@ -55,7 +55,8 @@ function getExpandBtns() {
     if (answerSpanElement[i].offsetWidth < answerSpanElement[i].scrollWidth) {
       const btnAnswerExpand = document.createElement('button');
       btnAnswerExpand.classList.add('overflow-btn');
-      btnAnswerExpand.innerHTML = '&#187;';
+      btnAnswerExpand.innerHTML =
+        '<img src="../images/iconmonstr-arrow-down-circle-filled-32.png" />';
       btnAnswerExpand.addEventListener('click', toggleExpandedText);
       btnContainerElement[i].appendChild(btnAnswerExpand);
       btnAnswerDiv.replaceChild(
@@ -103,6 +104,6 @@ function toggleExpandedText(e) {
   let btnElementParent = e.target.parentNode;
   answerElement.classList.toggle('answer-txtShow');
   btnElementParent.classList.toggle('btn-answerShow');
-  btnElement.classList.toggle('overflow-btnDn');
+  btnElement.classList.toggle('overflow-btnOpen');
   return;
 }

@@ -47,7 +47,7 @@ function checkNumOfDictStoreEntries() {
   countRequest.onsuccess = (event) => {
     let recordCount = countRequest.result;
     console.log(`Number of remaining records is ${recordCount}`);
-    if (recordCount < 40) {
+    if (recordCount < 4) {
       fetchDataFromMongoDB();
     }
   };
@@ -98,11 +98,13 @@ function seedIndexedDB(data) {
     };
     addRequest.onerror = function (event) {
       console.log('Add Request failed ', addRequest.error);
+      event.preventDefault();
     };
   }
   transaction.oncomplete = function () {
-    console.log(`All requests have succeeded and the transaction has committed. The
-    number of records added  = ${totalRecords}`);
+    console.log(
+      `transaction has committed. The number of records added  = ${totalRecords}`
+    );
   };
   transaction.onabort = function (event) {
     console.log(`Transactions not committed ${transaction.error}`);
